@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detection Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h2>Analysis Result for {{ filename }}</h2>
+    <p><strong>Deepfake Confidence Score:</strong> {{ score }}%</p>
+    <p><strong>Model Explanation:</strong> {{ explanation }}</p>
+    <h3>Metadata Report:</h3>
+    <pre>{{ metadata }}</pre>
+    <a href="{{ url_for('index') }}">Analyze Another</a>
+</body>
+</html>
